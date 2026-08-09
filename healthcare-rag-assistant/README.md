@@ -1,16 +1,68 @@
-# React + Vite
+# RAG-Based Healthcare Query Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered multi-agent application that allows hospital staff to query patient records and hospital policy documents using natural language.
 
-Currently, two official plugins are available:
+The system uses an **Orchestrator Agent** to classify incoming queries and route them to the appropriate agent:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **NLP-to-SQL Agent** – answers data-related questions using the patient database.
+- **RAG Agent** – retrieves relevant information from hospital policy documents.
 
-## React Compiler
+The project demonstrates how structured and unstructured healthcare information can be accessed through a single conversational interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Multi-Agent Architecture
+- Query routing using an Orchestrator Agent
+- Natural Language to SQL
+- Retrieval-Augmented Generation (RAG)
+- Vector-based document retrieval
+- Synthetic healthcare dataset
+- SQLite database for patient records
+- React + Vite frontend
+- Python-based AI/backend components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How It Works
+
+```text
+User Query
+    ↓
+Orchestrator Agent
+    ↓
+ ┌───────────────┬────────────────┐
+ ↓               ↓
+SQL Agent       RAG Agent
+ ↓               ↓
+Patient DB      Policy Documents
+ ↓               ↓
+ └────── Answer ──────┘
+             ↓
+           User
+```
+
+## Technologies Used
+
+### Frontend
+
+- React.js
+- Vite
+- JavaScript
+- CSS
+
+### Backend & AI
+
+- Python
+- Retrieval-Augmented Generation (RAG)
+- Natural Language to SQL
+- Multi-Agent Architecture
+- Vector Search
+
+### Database & Storage
+
+- SQLite
+- ChromaDB
+- CSV
+- PDF Documents
+git status
+## Disclaimer
+
+This project uses **synthetic healthcare data and documents** for educational and demonstration purposes. It is not intended for real-world medical diagnosis, treatment, or clinical decision-making.  
