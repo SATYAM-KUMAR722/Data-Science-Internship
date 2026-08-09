@@ -28,7 +28,7 @@ User Query
     ↓
 Orchestrator Agent
     ↓
- ┌───────────────┬────────────────┐
+ ┌───────────────┬
  ↓               ↓
 SQL Agent       RAG Agent
  ↓               ↓
