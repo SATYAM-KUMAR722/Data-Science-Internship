@@ -24,10 +24,10 @@ The project demonstrates how structured and unstructured healthcare information 
 ## How It Works
 
 ```text
-User Query
-    ↓
-Orchestrator Agent
-    ↓
+    User Query
+        ↓
+    Orchestrator Agent
+        ↓
  ┌───────────────┬
  ↓               ↓
 SQL Agent       RAG Agent
@@ -35,8 +35,8 @@ SQL Agent       RAG Agent
 Patient DB      Policy Documents
  ↓               ↓
  └────── Answer ──────┘
-             ↓
-           User
+           ↓
+         User
 ```
 
 ## Technologies Used
